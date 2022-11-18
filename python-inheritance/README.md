@@ -1,2 +1,1 @@
-### Python Programming
-Readme file for python-inheritance directory
+Inheritance in python
