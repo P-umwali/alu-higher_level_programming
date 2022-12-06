@@ -45,7 +45,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        '''Returning the list of the JSON string representation of json_string'''
+        '''Returning JSON string list representation of json_string'''
 
         if json_string is None or json_string == []:
             return []
