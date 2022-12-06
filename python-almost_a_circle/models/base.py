@@ -22,7 +22,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         '''
-        returning JSON string of list_dictionaries 
+        returning JSON string of list_dictionaries
         '''
 
         if list_dictionaries is None or list_dictionaries == []:
