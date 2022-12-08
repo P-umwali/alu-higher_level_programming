@@ -5,7 +5,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """ a Rectangle class which inherites from base"""
+    """Rectangle class which inherites from base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
       """initialization of the attributes"""
@@ -126,7 +126,7 @@ class Rectangle(Base):
             self.y = kwargs["y"] if "y" in kwargs else self.y
 
     def to_dictionary(self):
-        """dictionary representation of a rectangle"""
+        """dictionary representation of rectangle"""
         return {
             'id': self.id,
             'width': self.width,
