@@ -5,11 +5,11 @@ from models.base import Base
 
 
 class Rectangle(Base):
-     """ a Rectangle class which inherites from base"""
+    """ a Rectangle class which inherites from base"""
 
-     def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width, height, x=0, y=0, id=None):
       """initialization of the attributes"""
-     
+
     super().__init__(id)
     self.width = width
     self.height = height
