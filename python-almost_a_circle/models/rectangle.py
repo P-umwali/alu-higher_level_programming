@@ -101,7 +101,7 @@ class Rectangle(Base):
             print(' ' * self.x + '#' * self.width)
 
     def __str__(self):
-        """ [Rectangle] presentation"""
+        """ [Rectangle] """
         return "[Rectangle] ({}) {}/{} - {}/{}" \
             .format(self.id, self.x, self.y, self.width, self.height)
 
