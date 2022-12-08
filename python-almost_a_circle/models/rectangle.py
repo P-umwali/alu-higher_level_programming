@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle class from base"""
+""" import base"""
 
 from models.base import Base
 
