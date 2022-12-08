@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" import base from models"""
+"""import base from models"""
 
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle class which inherites from base"""
+    """Rectangle class inherites from base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
       """initialization of the attributes"""
@@ -18,7 +18,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """ getting the Width"""
+        """getting the Width"""
 
         return self.__width
 
@@ -36,7 +36,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """ getting the height  """
+        """getting the height"""
 
         return self.__height
 
@@ -60,7 +60,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """x"""
+        """getting x"""
 
         if type(value) != int:
             raise TypeError("x must be an integer")
@@ -72,7 +72,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """ getting the y"""
+        """getting the y"""
 
         return self.__y
 
