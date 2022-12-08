@@ -95,13 +95,16 @@ class Rectangle(Base):
 
     def display(self):
         """return the rectangle from #"""
+
         for i in range(self.y):
             print()
+
         for i in range(self.height):
             print(' ' * self.x + '#' * self.width)
 
     def __str__(self):
-        """ [Rectangle] """
+        """[Rectangle]"""
+
         return "[Rectangle] ({}) {}/{} - {}/{}" \
             .format(self.id, self.x, self.y, self.width, self.height)
 
@@ -117,6 +120,7 @@ class Rectangle(Base):
             except IndexError:
                 pass
         elif len(kwargs) != 0:
+
             self.id = kwargs["id"] if "id" in kwargs else self.id
             self.width = kwargs["width"] if "width" in kwargs \
                 else self.width
@@ -127,6 +131,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """dictionary representation of rectangle"""
+
         return {
             'id': self.id,
             'width': self.width,
