@@ -8,7 +8,7 @@ class Rectangle(Base):
     """Rectangle class inherites from base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-      """initialization of the attributes"""
+     """initialization of the attributes"""
 
     super().__init__(id)
     self.width = width
