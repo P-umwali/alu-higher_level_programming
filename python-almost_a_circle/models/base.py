@@ -63,7 +63,7 @@ class Base:
         return dummy
 
     @classmethod
-    def load_from_file(cls):
+    def load_from_file_csv(cls):
         '''Returning  a list of instances'''
 
         filename = cls.__name__ + ".json"
