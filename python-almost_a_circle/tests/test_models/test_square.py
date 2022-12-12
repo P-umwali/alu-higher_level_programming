@@ -189,3 +189,4 @@ class TestSquare(unittest.TestCase):
         from_file = Square.load_from_file()
         self.assertEqual(type(from_file), list)
         self.assertEqual(from_file[0].size, 2)
+        
