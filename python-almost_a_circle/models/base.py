@@ -30,7 +30,7 @@ class Base:
         return json.dumps(list_dictionaries)
 
     @classmethod
-    def save_to_file_csv(cls, list_objs):
+    def save_to_filen(cls, list_objs):
         ''''Writing the JSON string  of list_objs to a file'''
 
         filename = cls.__name__ + ".json"
@@ -63,7 +63,7 @@ class Base:
         return dummy
 
     @classmethod
-    def load_from_file_csv(cls):
+    def load_from_file(cls):
         '''Returning  a list of instances'''
 
         filename = cls.__name__ + ".json"
