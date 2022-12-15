@@ -14,10 +14,10 @@ if __name__ == "__main__":
         connect=argv[3],
         charset="utf8")
 
-    ora = My_connect.cursor()
+    my_cursor = My_connect.cursor()
     ora.execute("SELECT * FROM states ORDER BY id ASC")
 
     for row in ora.fetchall():
         print(row)
-    ora.close()
+    my_cursor.close()
     My_connect.close()
