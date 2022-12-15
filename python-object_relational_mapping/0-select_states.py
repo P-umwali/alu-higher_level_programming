@@ -6,7 +6,7 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    connect = MySQLdb.connect(
+    My_connect = MySQLdb.connect(
         host="localhost",
         port=3306,
         user=argv[1],
@@ -14,10 +14,10 @@ if __name__ == "__main__":
         connect=argv[3],
         charset="utf8")
 
-    ora = connect.cursor()
+    ora = My_connect.cursor()
     ora.execute("SELECT * FROM states ORDER BY id ASC")
 
     for row in ora.fetchall():
         print(row)
     ora.close()
-    connect.close()
+    My_connect.close()
