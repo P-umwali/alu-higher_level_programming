@@ -2,22 +2,22 @@
 
 """  A list of all states from the database hbtn_0e_0_usa"""
 
-import MySQLdb
+import MySQLmydb
 from sys import argv
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(
+    my_db_conn = MySQLmydb.connect(
         host="localhost",
         port=3306,
         user=argv[1],
         password=argv[2],
-        db=argv[3],
+        my_db_conn=argv[3],
         charset="utf8")
 
-    ora = db.cursor()
+    ora = my_db_conn.cursor()
     ora.execute("SELECT * FROM states ORDER BY id ASC")
 
     for row in ora.fetchall():
         print(row)
     ora.close()
-    db.close()
+    my_db_conn.close()
