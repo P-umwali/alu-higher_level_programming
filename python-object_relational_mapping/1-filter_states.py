@@ -1,4 +1,4 @@
- #!/usr/bin/python3
+#!/usr/bin/python3
 """Lists all states that starts with N."""
 
 import sys
