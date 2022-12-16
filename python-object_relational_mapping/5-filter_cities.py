@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Lists all cities in a state from hbtn_0e_4_usa database."""
 
 import sys
