@@ -1,22 +1,24 @@
-#!/usr/bin/python3
-""" A script that lists all states with a name starting with N (upper N)"""
+ #!/usr/bin/python3
+"""Lists all states that starts with N."""
 
+import sys
 import MySQLdb
-from sys import argv
+
 
 if __name__ == "__main__":
-    db_get = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=argv[1],
-        password=argv[2],
-        db=argv[3])
+    my_connect = MySQLdb.connect(
+            user=sys.argv[1],
+            password=sys.argv[2],
+            db=sys.argv[3],
+            host="localhost",
+            port=3306
+        )
 
-    ora = db_get.cursor()
-    ora.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    my_cursor = my_connect.cursor()
+    my_cursor.execute("SELECT * FROM states \
+            WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
+    result = my_cursor.fetchall()
 
-    for row in ora.fetchall():
-        if row[1][0] == 'N':
-            print(row)
-    ora.close()
-    db_get.close()
+    for i in result:
+        print(i)
+    my_connect.close()
