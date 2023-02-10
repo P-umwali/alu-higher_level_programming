@@ -6,5 +6,6 @@ fs.readFile(aFile, 'utf8', (err, data) => {
     console.log(err);
     return;
   }
-  console.log(aFile);
+
+  console.log(data);
 });
