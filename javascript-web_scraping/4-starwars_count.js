@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const url = process.argv[2];
-const req = rrequire('request');
+const req = require('request');
 req.get(url, (err, body) => {
   if (err) {
     console.log(err);
